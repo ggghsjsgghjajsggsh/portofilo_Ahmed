@@ -1,0 +1,114 @@
+section.contact .icon-envelope{
+    color: var(--suptitle);
+    margin-right: 1rem;
+    font-size: 1.8rem;
+}
+
+section.contact .contact-title{
+    font-size: 2.1rem;
+    color: var(--title);
+    margin-bottom: 1rem;
+}
+
+section.contact .subtitle{
+    color: var(--suptitle);
+    margin-bottom: 2rem;
+    line-height: 1.65rem;
+}
+
+section.contact label{
+    color: var(--suptitle);
+}
+
+section.contact #email,
+section.contact #message{
+   all: unset;
+   color: var(--title);
+   background-color: rgba(63, 63, 70, 0.15);
+   border: 1px solid rgba(63, 63, 70, 0.89);
+   width: 16rem;
+   padding: 0.5rem 1rem;
+   margin-left: 1rem;
+   border-radius: 5px;
+   transition: 0.3s;
+   font-size: 1.1rem;
+}
+
+.light section.contact #email,
+.light section.contact #message{
+     background-color: rgba(255, 255, 255, 0.164);
+     border: 1px solid rgba(63, 63, 70, 0.603);
+     color: var(--title);
+}
+
+.light section.contact #email:focus,
+.light section.contact #message:focus,
+.light section.contact #email:hover,
+.light section.contact #message:hover{
+   outline: 1px solid rgb(68, 77, 75);
+   
+}
+
+
+
+section.contact #message{
+    min-height: 9rem;
+    resize: vertical;
+}
+
+section.contact .submit{
+
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.05rem;
+  background-color: rgba(36, 37, 45, 1);
+  color: #ffffff;
+  opacity: 0.5;
+  border-radius: 5px;
+  border: 1px solid rgb(126, 126, 136);
+  cursor: pointer;
+  margin-top: 1.8rem;
+  transition: 0.3s ease;
+}
+section.contact .submit:hover {
+  opacity: 1;
+  outline: 1px solid rgba(45, 212, 191);
+  scale: 0.97;
+}
+
+/* responsive styles */
+
+@media (max-width:1150px){
+  .contact-animation{
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+
+    .animation{
+        display: none;
+    }
+  section.contact form{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    
+  }
+   section.contact form .input-group {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  section.contact #email,
+  section.contact #message{
+    width: 100%;
+    margin-left: 0;
+    padding: 0.7rem 0;
+    margin-top: 1rem;
+}
+
+section.contact .submit{
+    width: 20%;
+    align-self: center;
+}
+}

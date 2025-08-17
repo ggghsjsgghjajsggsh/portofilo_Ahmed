@@ -1,0 +1,167 @@
+:root {
+    --primary: #000;
+    --secondary: rgb(24 24 27);
+    --border: rgba(63, 63, 70, 0.4);
+    --title: rgb(244 244 245);
+    --suptitle: rgb(161 161 170);
+    --bgheader: rgb(39 39 42);
+    --blue: rgb(39 188 252)
+}
+
+.nav-list {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+
+}
+
+header ul li a {
+    color: var(--title);
+    opacity: 0.9;
+    font-size: 0.88rem;
+    font-weight: bold;
+}
+
+header ul li a:hover {
+    color: var(--blue);
+    opacity: 1;
+    font-size: 0.9rem;
+
+
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.4rem;
+    margin-top: 1.2rem;
+
+}
+
+header .nav-list {
+    background-color: var(--bgheader);
+    border-radius: 55px;
+    padding: 0.77rem 1.6rem;
+    box-shadow: 1px 2px 40px rgba(228, 219, 219, 0.1);
+}
+
+header button {
+    font-size: 1.2rem;
+}
+
+
+header button.icon-menu{
+    display: none;
+}
+
+/* icon */
+header .mode,
+header .icon-menu {
+    background-color: var(--bgheader);
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--suptitle);
+    border: 1px solid rgba(244, 165, 96, 0.247);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+header .icon-sun{
+    color: orange;
+}
+
+header .mode:hover,
+header .icon-menu:hover {
+  color: var(--suptitle);
+    border: 1px solid rgb(244, 165, 96);
+    transition:  0.3s;
+}
+header .icon-close {
+    font-size: 1.5rem;
+    color: var(--suptitle);
+    transition: 0.3s ease;
+}
+
+header .icon-close:hover{
+    font-size: 1.6rem;
+    color: crimson;
+    transform: rotate(360deg);
+}
+
+/* model */
+
+header .fixed {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(39, 39, 48, 0.91);
+    z-index: 11;
+    backdrop-filter: blur(4px);
+    
+}
+
+@keyframes mymove{
+    0% {scale: 0;}
+   
+    60% {scale: 1.2;}
+    100% {scale: 1;}
+}
+
+header .fixed ul.model{
+   animation: mymove 1s 1;
+    width: 75%;
+    background-color: var(--secondary);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+}
+
+header .fixed ul.model li {
+   border-bottom: 1px solid var(--border);
+   padding-bottom: 0.77rem;
+   padding-top: 0.5rem;
+}
+header .fixed ul.model li a{
+    font-size: 1.1rem;
+}
+
+header .fixed ul.model li:last-child{
+    border: none;
+}
+header .fixed ul.model li:first-child{
+     text-align: right;
+     padding-bottom: 0;
+     padding-top: 0.2rem;
+     border: none;
+}
+
+
+@media (max-width: 700px) {
+    header .nav-list {
+        display: none;
+    }
+
+   header button.icon-menu{
+    display: block;
+    background-color: var(--bgheader);
+    height: 2.4rem;
+    width: 2.4rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--suptitle);
+    border: 1px solid rgba(244, 165, 96, 0.247);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+}

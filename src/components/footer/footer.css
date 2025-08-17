@@ -1,0 +1,40 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.9rem;
+}
+
+.footer ul {
+ gap: 1rem;
+}
+
+.footer li {
+  display: inline;
+  margin-right: 1rem;
+}
+
+.footer a {
+  color: var(--suptitle);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: var(--blue);
+  font-weight: 500;
+}
+
+
+.footer p {
+  color: rgb(113, 113, 322);
+ 
+}
+
+@media (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
