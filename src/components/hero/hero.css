@@ -54,16 +54,25 @@ section.hero .icons{
     gap: 1rem;
     font-size: 1.3rem;
     color: var(--suptitle);
-    cursor: pointer;
-    
-   
+    cursor: pointer; 
 }
+section.hero .icons .icon{
+    font-size: 1.3rem;
+}
+
 
 section.hero .icons .icon:hover{
     font-size: 1.4rem;
     transition: 0.4s;
     color: var(--icon-hover);
 }
+
+
+
+
+
+
+
 
 
 /* right-section animation */

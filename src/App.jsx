@@ -1,9 +1,11 @@
 import Header from './components/header/header';
 import Hero from './components/hero/hero';
 import Main from './components/main/main';
+import Skills from './components/Skills/Skills';
 import Contact from './components/contact/contact';
 import Footer from './components/footer/footer';
 import { useEffect, useState } from 'react';
+
 
 
 
@@ -28,6 +30,8 @@ function App() {
     <Hero />
     <div className='divider'/>
     <Main />
+    <div className='divider'/>
+    <Skills />
     <div className='divider'/>
     <Contact />
     <div className='divider'/>

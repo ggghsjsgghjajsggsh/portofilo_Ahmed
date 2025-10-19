@@ -1,40 +1,221 @@
-.footer {
+/* ========== تصميم أساسي مشترك ========== */
+.site-footer {
+  transition: all 0.6s ease;
+  padding: 60px 20px 20px;
+  font-family: 'Cairo', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-content {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1.9rem;
+  flex-wrap: wrap;
+  gap: 40px;
+  animation: fadeUp 1s ease forwards;
 }
 
-.footer ul {
- gap: 1rem;
+.footer-section {
+  flex: 1 1 250px;
+  min-width: 220px;
 }
 
-.footer li {
-  display: inline;
-  margin-right: 1rem;
+.footer-section h3 {
+  font-size: 1.3rem;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  color: #00bcd4;
+  position: relative;
 }
 
-.footer a {
+.footer-section ul {
+  list-style: none;
   color: var(--suptitle);
+  padding: 0;
+  font-weight: 600;
+  margin: 0;
+  transition: 0.9s ease;
+}
+
+.footer-section ul li:hover {
+  color: #00bbd4ef;
+  transform: translateX(-5px);
+}
+
+.footer-section .social-icon i {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 15px 15px;
+  gap: 20px;
+}
+.footer-section .social-icon .icons.icon-twitter:hover{
+      font-size: 1.5rem;
+      background-color: #00acee;
+      transition-duration: .3s;
+
+}
+
+.footer-section .social-icon .icons.icon-linkedin:hover{
+      font-size: 1.5rem;
+      background-color: #0072b1;
+      transition-duration: .3s;
+
+}
+
+.footer-section .social-icon .icons.icon-github:hover{
+      font-size: 1.5rem;
+      background-color: #747474;
+      transition-duration: .3s;
+
+}
+
+/* ////////////////////// */
+
+
+.footer-section ul li {
+  margin: 10px 0;
+  
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section a {
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  font-size: 1.3rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 15px;
+  margin-top: 40px;
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 
-.footer a:hover {
-  text-decoration: underline;
-  color: var(--blue);
-  font-weight: 500;
+/* ========== أنيميشن ========== */
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
-
-.footer p {
-  color: rgb(113, 113, 322);
- 
+/* ========== زر التبديل ========== */
+.toggle-btn {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  background: rgba(255,255,255,0.1);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-@media (max-width: 800px) {
-  .footer {
-    flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+.toggle-btn:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.05);
+}
+
+/* ========== الوضع الداكن ========== */
+.site-footer.dark {
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+  color: #fff;
+}
+
+.site-footer.dark h3 {
+  color: #00bcd4;
+}
+
+.site-footer.dark ul li,
+.site-footer.dark a {
+  color: #ccc;
+}
+
+.site-footer.dark ul li:hover,
+.site-footer.dark a:hover {
+  color: #00bcd4;
+  transform: translateX(-5px);
+}
+
+.site-footer.dark .social-icon {
+  background: #222;
+  color: #00bcd4;
+}
+
+.site-footer.dark .social-icon:hover {
+  background: #00bcd4;
+  color: #fff;
+}
+
+/* ========== الوضع الفاتح ========== */
+.site-footer.light {
+  background: linear-gradient(135deg, #fdfdfd, #e6e6e6);
+  color: #333;
+}
+
+.site-footer.light h3 {
+  color: #0077b6;
+}
+
+.site-footer.light ul li,
+.site-footer.light a {
+  color: #555;
+}
+
+.site-footer.light ul li:hover,
+.site-footer.light a:hover {
+  color: #0077b6;
+  transform: translateX(-5px);
+}
+
+.site-footer.light .social-icon {
+  background: #ddd;
+  color: #0077b6;
+}
+
+.site-footer.light .social-icon:hover {
+  background: #0077b6;
+  color: #fff;
+}
+
+/* ========== تجاوب ========== */
+@media (max-width: 992px) {
+  .footer-content {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .toggle-btn {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

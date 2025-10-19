@@ -30,7 +30,7 @@ function Header() {
           <li className='nav-item'><a href='#hero'>About</a></li>
           <li className='nav-item'><a href='#Articles'>Articles</a></li>
           <li className='nav-item'><a href='#Projects'>Projects</a></li>
-          <li className='nav-item'><a href='#Speaking'>Speaking</a></li>
+          <li className='nav-item'><a href='#Skills'>Skills</a></li>
           <li className='nav-item'><a href='#Contact'>Contact</a></li>
         </ul>
       </nav>
@@ -60,7 +60,7 @@ function Header() {
             <li className='nav-item'><a href='#hero'>About</a></li>
             <li className='nav-item'><a href='#Articles'>Articles</a></li>
             <li className='nav-item'><a href='#Projects'>Projects</a></li>
-          <li className='nav-item'><a href='#Speaking'>Speaking</a></li>
+          <li className='nav-item'><a href='#Skills'>Skills</a></li>
           <li className='nav-item'><a href='#Users'>Users</a></li>
         </ul>
         
