@@ -28,11 +28,11 @@ function App() {
     <div id='up' className='container'>
     <Header />
     <Routes>
-    <Route path='/portfolio/' element={<Hero />} ></Route>
-    <Route path='/portfolio/hero' element={<Hero />} ></Route>
-    <Route path='/portfolio/projects' element={<Main />} ></Route>
-    <Route path='/portfolio/skills' element={<Skills />} ></Route>
-    <Route path='/portfolio/contact' element={<Contact />} ></Route>
+    <Route path='/' element={<Hero />} ></Route>
+    <Route path='/hero' element={<Hero />} ></Route>
+    <Route path='/projects' element={<Main />} ></Route>
+    <Route path='/skills' element={<Skills />} ></Route>
+    <Route path='/contact' element={<Contact />} ></Route>
    </Routes>
     <div className='divider'/>
     <Footer />

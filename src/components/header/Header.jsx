@@ -1,11 +1,9 @@
-
 import { NavLink } from 'react-router-dom';
-import './header.css'
-import React, {  useEffect, useState } from 'react'
+import './header.css';
+import React, { useEffect, useState } from 'react';
 
 function Header() {
-  // const [showModel, setShowModel] = React.useState(false)
-  const [showModel, setShowModel] = useState(false)
+  const [showModel, setShowModel] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem("currentMode") ?? 'dark');
 
   useEffect(() => {
@@ -18,74 +16,68 @@ function Header() {
     }
   }, [theme]);
 
-
-
-
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem("currentMode", newTheme);
+    setTheme(newTheme);
+  };
 
   return (
     <header className='header'>
-      <button onClick={() => setShowModel(true)} className='icon-menu'/>
+      {/* زر القائمة للهواتف */}
+      <button onClick={() => setShowModel(true)} className='icon-menu' />
       <div></div>
+
+      {/* القوائم العادية */}
       <nav>
         <ul className='nav-list'>
-          <NavLink to={'/portfolio/hero'} className='nav-item'><a href='#hero'>About</a></NavLink>
-          {/* <NavLink to={'/portfolio/articles'} className='nav-item'><a href='#Articles'>Articles</a></NavLink> */}
-          <NavLink to={'/portfolio/projects'} className='nav-item'><a href='#Projects'>Projects</a></NavLink>
-          <NavLink to={'/portfolio/skills'} className='nav-item'><a href='#Skills'>Skills</a></NavLink>
-          <NavLink to={'/portfolio/contact'} className='nav-item'><a href='#Contact'>Contact</a></NavLink>
+          <li>
+            <NavLink to="/hero" className='nav-item'>About</NavLink>
+          </li>
+          {/* <li><NavLink to="/articles" className='nav-item'>Articles</NavLink></li> */}
+          <li>
+            <NavLink to="/projects" className='nav-item'>Projects</NavLink>
+          </li>
+          <li>
+            <NavLink to="/skills" className='nav-item'>Skills</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className='nav-item'>Contact</NavLink>
+          </li>
         </ul>
       </nav>
 
-      <button onClick={()=>{
-        localStorage.setItem("currentMode", theme === 'dark' ? 'light' : 'dark');
-        setTheme(localStorage.getItem("currentMode"))
-
-
-      }} className='mode'>
-        {theme === 'dark' ? (<span className='icon-moon-o'></span>) :
-         (<span className='icon-sun'></span>)}
+      {/* زر تغيير الثيم */}
+      <button onClick={toggleTheme} className='mode'>
+        {theme === 'dark' ? (<span className='icon-moon-o'></span>) : (<span className='icon-sun'></span>)}
       </button>
 
+      {/* المودال للهاتف */}
+      {showModel && (
+        <div className="fixed">
+          <ul className="model">
+            <li>
+              <button className='icon-close' onClick={() => setShowModel(false)} />
+            </li>
 
-    {      /* <button className='menu'>show model</button>} */
-    
-    showModel &&(
-
-<div className="fixed">
-  <ul className="model">
-    <li>
-      <button className='icon-close' onClick={() => setShowModel(false)}/>
-    </li>
-
-    <NavLink to={'/portfolio/hero'} className='nav-item' onClick={() => setShowModel(false)}>
-      <a href='#hero'>About</a>
-    </NavLink>
-
-    {/* <NavLink to={'/portfolio/articles'} className='nav-item' onClick={() => setShowModel(false)}>
-      <a href='#Articles'>Articles</a>
-    </NavLink> */}
-
-    <NavLink to={'/portfolio/projects'} className='nav-item' onClick={() => setShowModel(false)}>
-      <a href='#Projects'>Projects</a>
-    </NavLink>
-
-    <NavLink to={'/portfolio/skills'} className='nav-item' onClick={() => setShowModel(false)}>
-      <a href='#Skills'>Skills</a>
-    </NavLink>
-
-    <NavLink to={'/portfolio/contact'} className='nav-item' onClick={() => setShowModel(false)}>
-      <a href='#Contact'>Contact</a>
-    </NavLink>
-
-  </ul>
-</div>
-
-    )
-    
-    }
-
+            <li>
+              <NavLink to="/hero" className='nav-item' onClick={() => setShowModel(false)}>About</NavLink>
+            </li>
+            {/* <li><NavLink to="/articles" className='nav-item' onClick={() => setShowModel(false)}>Articles</NavLink></li> */}
+            <li>
+              <NavLink to="/projects" className='nav-item' onClick={() => setShowModel(false)}>Projects</NavLink>
+            </li>
+            <li>
+              <NavLink to="/skills" className='nav-item' onClick={() => setShowModel(false)}>Skills</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact" className='nav-item' onClick={() => setShowModel(false)}>Contact</NavLink>
+            </li>
+          </ul>
+        </div>
+      )}
     </header>
   )
 }
 
-export default Header
+export default Header;
