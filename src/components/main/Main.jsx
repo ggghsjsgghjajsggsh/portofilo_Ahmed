@@ -4,15 +4,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 const myProjects = [
-  { projectTitle: "react project", category: ["react"], description: "Lorem ipsum...", image: "public/1.jpg" },
-  { projectTitle: "react & css project", category: ["react" , "css"], description: "Lorem ipsum...", image: "public/2.jpg" },
-  { projectTitle: "css project", category: ["css"], description: "Lorem ipsum...", image: "public/3.jpg" },
-  { projectTitle: "react project", category: ["react"], description: "Lorem ipsum...", image: "public/4.jpg" },
-  { projectTitle: "css project", category: ["css"], description: "Lorem ipsum...", image: "public/5.jpg" },
-  { projectTitle: "javascript project", category: ["javascript"], description: "Lorem ipsum...", image: "public/6.jpg" },
-  { projectTitle: "node project", category: ["node"], description: "Lorem ipsum...", image: "public/7.jpg" },
-  { projectTitle: "node project", category: ["node"], description: "Lorem ipsum...", image: "public/8.jpg" },
-  { projectTitle: "javascript project", category: ["javascript"], description: "Lorem ipsum...", image: "public/9.jpg" },
+  { projectTitle: "react project", category: ["react"], description: "Lorem ipsum...", image: "/img/1.jpg" },
+  { projectTitle: "react & css project", category: ["react" , "css"], description: "Lorem ipsum...", image: "/img/2.jpg" },
+  { projectTitle: "css project", category: ["css"], description: "Lorem ipsum...", image: "/img/3.jpg" },
+  { projectTitle: "react project", category: ["react"], description: "Lorem ipsum...", image: "/img/4.jpg" },
+  { projectTitle: "css project", category: ["css"], description: "Lorem ipsum...", image: "/img/5.jpg" },
+  { projectTitle: "javascript project", category: ["javascript"], description: "Lorem ipsum...", image: "/img/6.jpg" },
+  { projectTitle: "node project", category: ["node"], description: "Lorem ipsum...", image: "/img/7.jpg" },
+  { projectTitle: "node project", category: ["node"], description: "Lorem ipsum...", image: "/img/8.jpg" },
+  { projectTitle: "javascript project", category: ["javascript"], description: "Lorem ipsum...", image: "/img/9.jpg" },
 ];
 
 function Main() {
