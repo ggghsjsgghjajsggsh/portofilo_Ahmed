@@ -15,7 +15,7 @@ function Hero() {
           <img src="public/IMG_7018-modified.png" className='avatar' alt="" />
           <div className='icon-verified'></div>
         </div>
-        <h1 className='title'>Software designer, founder, and amateur astronaut.</h1>
+        <h1 className='title'>"Full-Stack developer, engineer, and problem solver"</h1>
         <p className='subtitle'>I create digital experiences that make a difference. I'm a software designer and entrepreneur based in San Francisco.
           With a passion for innovation and a commitment to excellence.
 

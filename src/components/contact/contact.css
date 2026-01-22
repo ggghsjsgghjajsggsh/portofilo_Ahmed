@@ -1,3 +1,7 @@
+section.contact{
+  margin-top: 45px;
+}
+
 section.contact .icon-envelope{
     color: var(--suptitle);
     margin-right: 1rem;

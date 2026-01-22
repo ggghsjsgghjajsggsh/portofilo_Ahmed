@@ -17,14 +17,14 @@
 
 }
 
-header ul li a {
+header .nav-item a {
     color: var(--title);
     opacity: 0.9;
     font-size: 0.88rem;
     font-weight: bold;
 }
 
-header ul li a:hover {
+header .nav-item a:hover {
     color: var(--blue);
     opacity: 1;
     font-size: 0.9rem;
@@ -97,7 +97,7 @@ header .icon-close:hover{
 
 /* model */
 
-header .fixed {
+header .fixed{
     position: fixed;
     inset: 0;
     background-color: rgba(39, 39, 48, 0.91);
@@ -164,4 +164,39 @@ header .fixed ul.model li:first-child{
     cursor: pointer;
 }
 
+}
+
+.fixed .model {
+  width: 75%;
+  background-color: rgba(39, 39, 48, 0.91);
+  margin: 2rem auto 0 auto;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+}
+
+.fixed .model li {
+  text-align: right;
+}
+
+.fixed .model .nav-item {
+  display: block;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.fixed .model .nav-item:last-child {
+  border-bottom: none;
+}
+
+.fixed .model .nav-item a {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--suptitle);
+  transition: 0.25s ease;
+}
+
+.fixed .model .nav-item:hover a {
+  transform: translateX(6px);
+  scale: 1.03;
+  color: var(--suptitle);
 }

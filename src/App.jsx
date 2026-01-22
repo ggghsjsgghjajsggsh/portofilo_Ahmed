@@ -2,9 +2,10 @@ import Header from './components/header/header';
 import Hero from './components/hero/hero';
 import Main from './components/main/main';
 import Skills from './components/Skills/Skills';
-import Contact from './components/contact/contact';
+import Contact from './components/Contact/Contact';
 import Footer from './components/footer/footer';
 import { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 
 
 
@@ -26,14 +27,13 @@ function App() {
   return (
     <div id='up' className='container'>
     <Header />
-   
-    <Hero />
-    <div className='divider'/>
-    <Main />
-    <div className='divider'/>
-    <Skills />
-    <div className='divider'/>
-    <Contact />
+    <Routes>
+    <Route path='/portfolio/' element={<Hero />} ></Route>
+    <Route path='/portfolio/hero' element={<Hero />} ></Route>
+    <Route path='/portfolio/projects' element={<Main />} ></Route>
+    <Route path='/portfolio/skills' element={<Skills />} ></Route>
+    <Route path='/portfolio/contact' element={<Contact />} ></Route>
+   </Routes>
     <div className='divider'/>
     <Footer />
 

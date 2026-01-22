@@ -1,6 +1,7 @@
 
+import { NavLink } from 'react-router-dom';
 import './header.css'
-import React, { use, useEffect, useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 
 function Header() {
   // const [showModel, setShowModel] = React.useState(false)
@@ -27,11 +28,11 @@ function Header() {
       <div></div>
       <nav>
         <ul className='nav-list'>
-          <li className='nav-item'><a href='#hero'>About</a></li>
-          <li className='nav-item'><a href='#Articles'>Articles</a></li>
-          <li className='nav-item'><a href='#Projects'>Projects</a></li>
-          <li className='nav-item'><a href='#Skills'>Skills</a></li>
-          <li className='nav-item'><a href='#Contact'>Contact</a></li>
+          <NavLink to={'/portfolio/hero'} className='nav-item'><a href='#hero'>About</a></NavLink>
+          {/* <NavLink to={'/portfolio/articles'} className='nav-item'><a href='#Articles'>Articles</a></NavLink> */}
+          <NavLink to={'/portfolio/projects'} className='nav-item'><a href='#Projects'>Projects</a></NavLink>
+          <NavLink to={'/portfolio/skills'} className='nav-item'><a href='#Skills'>Skills</a></NavLink>
+          <NavLink to={'/portfolio/contact'} className='nav-item'><a href='#Contact'>Contact</a></NavLink>
         </ul>
       </nav>
 
@@ -50,22 +51,35 @@ function Header() {
     
     showModel &&(
 
-        <div className="fixed">
-          <ul className="model">
-           <li>
-            <button className='icon-close' onClick={() => setShowModel(false)}/>
-              
-           
-            </li>
-            <li className='nav-item'><a href='#hero'>About</a></li>
-            <li className='nav-item'><a href='#Articles'>Articles</a></li>
-            <li className='nav-item'><a href='#Projects'>Projects</a></li>
-          <li className='nav-item'><a href='#Skills'>Skills</a></li>
-          <li className='nav-item'><a href='#Users'>Users</a></li>
-        </ul>
-        
+<div className="fixed">
+  <ul className="model">
+    <li>
+      <button className='icon-close' onClick={() => setShowModel(false)}/>
+    </li>
 
-      </div>
+    <NavLink to={'/portfolio/hero'} className='nav-item' onClick={() => setShowModel(false)}>
+      <a href='#hero'>About</a>
+    </NavLink>
+
+    {/* <NavLink to={'/portfolio/articles'} className='nav-item' onClick={() => setShowModel(false)}>
+      <a href='#Articles'>Articles</a>
+    </NavLink> */}
+
+    <NavLink to={'/portfolio/projects'} className='nav-item' onClick={() => setShowModel(false)}>
+      <a href='#Projects'>Projects</a>
+    </NavLink>
+
+    <NavLink to={'/portfolio/skills'} className='nav-item' onClick={() => setShowModel(false)}>
+      <a href='#Skills'>Skills</a>
+    </NavLink>
+
+    <NavLink to={'/portfolio/contact'} className='nav-item' onClick={() => setShowModel(false)}>
+      <a href='#Contact'>Contact</a>
+    </NavLink>
+
+  </ul>
+</div>
+
     )
     
     }

@@ -13,7 +13,7 @@ function Contact() {
      if (state.succeeded) {
        setTimeout(() => {
          window.location.reload(); // اعمل ريفرش بعد ثانيتين
-       }, 2000);
+       }, 1000);
      }
    }, [state.succeeded]);
    
