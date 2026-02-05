@@ -12,7 +12,7 @@ function Hero() {
     <section className='hero'>
       <div className="left-section flex">
         <div className="parent-avatar flex">‍
-          <img src="/img/IMG_7018-modified.png" className='avatar' alt="" />
+          <img src="./img/IMG_7018-modified.png" loading="lazy" className='avatar' alt="" />
           <div className='icon-verified'></div>
         </div>
         <h1 className='title'>"Full-Stack developer, engineer, and problem solver"</h1>

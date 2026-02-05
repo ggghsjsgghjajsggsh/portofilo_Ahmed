@@ -3,16 +3,17 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
+// فقط غير هذا الجزء من myProjects:
 const myProjects = [
-  { projectTitle: "react project", category: ["react"], description: "Lorem ipsum...", image: "/img/1.jpg" },
-  { projectTitle: "react & css project", category: ["react" , "css"], description: "Lorem ipsum...", image: "/img/2.jpg" },
-  { projectTitle: "css project", category: ["css"], description: "Lorem ipsum...", image: "/img/3.jpg" },
-  { projectTitle: "react project", category: ["react"], description: "Lorem ipsum...", image: "/img/4.jpg" },
-  { projectTitle: "css project", category: ["css"], description: "Lorem ipsum...", image: "/img/5.jpg" },
-  { projectTitle: "javascript project", category: ["javascript"], description: "Lorem ipsum...", image: "/img/6.jpg" },
-  { projectTitle: "node project", category: ["node"], description: "Lorem ipsum...", image: "/img/7.jpg" },
-  { projectTitle: "node project", category: ["node"], description: "Lorem ipsum...", image: "/img/8.jpg" },
-  { projectTitle: "javascript project", category: ["javascript"], description: "Lorem ipsum...", image: "/img/9.jpg" },
+  { projectTitle: "react project", category: ["react"], description: "Lorem ipsum...", image: "./img/1.jpg" },
+  { projectTitle: "react & css project", category: ["react", "css"], description: "Lorem ipsum...", image: "./img/2.jpg"  },
+  { projectTitle: "css project", category: ["css"], description: "Lorem ipsum...", image: "./img/3.jpg" },
+  { projectTitle: "react project", category: ["react"], description: "Lorem ipsum...", image: "./img/4.jpg" },
+  { projectTitle: "css project", category: ["css"], description: "Lorem ipsum...", image: "./img/5.jpg" },
+  { projectTitle: "javascript project", category: ["javascript"], description: "Lorem ipsum...", image: "./img/6.jpg" },
+  { projectTitle: "node project", category: ["node"], description: "Lorem ipsum...", image: "./img/7.jpg" },
+  { projectTitle: "node project", category: ["node"], description: "Lorem ipsum...", image: "./img/8.jpg" },
+  { projectTitle: "javascript project", category: ["javascript"], description: "Lorem ipsum...", image: "./img/9.jpg" },
 ];
 
 function Main() {
@@ -69,7 +70,7 @@ function Main() {
       exit={{ opacity: 0, scale: 0.6 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
-      <img width={240} src={item.image} alt="" loading='lazy' />
+      <img width={240} src={item.image} alt={item.projectTitle} loading="lazy" />
       <div style={{ width: "240px" }} className="box">
         <h1 className="title">{item.projectTitle}</h1>
         <p className="subtitle">{item.description}</p>
